@@ -1,0 +1,42 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Телефонная книга</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<script src="addressbook.js" defer></script>
+</head>
+<body>
+	<style>
+		
+.favorite{
+    cursor: pointer;
+}
+	</style>
+	<div class="container text-center">
+		<h2>Телефонная книга</h2>
+		<form style="display: none; margin: 0 auto;" id="add" class="col-8 border">
+			<div class="row border m-4">
+				<label class="col-2">Имя</label>
+				<input id="name" class="col" type="text" />
+			</div>
+			<div class="row border m-4">
+				<label class="col-2">Номер телефона</label>
+				<input id="phone" class="col" type="number" />
+			</div>
+			<div class="flex">
+				
+				<button id="btnAdd" class="btn btn-primary">Добавить</button>
+				<button id="btnClose" class="btn btn-danger">Отменить</button>
+			</div>
+		</form>
+		<div id="list" class="border col-4 text-center " style="margin: 0 auto; padding: 0 20px;">
+			<input onkeyup="searchHandler()" id="search" class="row input mb-2 mt-2" style="margin: 0 auto;" placeholder="search" />
+			<div id="contacts" class="row">
+
+			</div>
+			<button id="openAdd" class="row btn btn-primary mb-2">добавить</button>
+		</div>
+	</div>
+</body>
+</html>
